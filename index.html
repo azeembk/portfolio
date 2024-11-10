@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azeem BK | MERN Stack Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom font and animations */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .hover-grow:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-200 overflow-x-hidden">
+
+ <!-- Navigation Bar -->
+<nav class="bg-gray-900 text-gray-100 fixed w-full top-0 left-0 z-50 shadow-md">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo or Site Name -->
+      <a href="#home" class="text-3xl font-semibold text-yellow-400 hover:text-yellow-500 transition">
+        Azeem BK
+      </a>
+  
+      <!-- Menu -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#projects" class="text-lg hover:text-yellow-400 transition duration-300">Projects</a>
+        <a href="#skills" class="text-lg hover:text-yellow-400 transition duration-300">Skills</a>
+        <a href="#experience" class="text-lg hover:text-yellow-400 transition duration-300">Experience</a>
+        <a href="#courses" class="text-lg hover:text-yellow-400 transition duration-300">Courses</a>
+        <a href="#books" class="text-lg hover:text-yellow-400 transition duration-300">Books</a>
+        <a href="#contact" class="text-lg hover:text-yellow-400 transition duration-300">Contact</a>
+      </div>
+  
+      <!-- Download CV Button (for large screens) -->
+      <a href="/path/to/your/cv.pdf" target="_blank" class="hidden md:block px-6 py-3 bg-yellow-500 text-gray-900 rounded-lg hover:bg-yellow-600 transition duration-300">
+        Download CV
+      </a>
+  
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden flex items-center space-x-4">
+        <button id="menu-toggle" class="text-2xl text-yellow-400 hover:text-yellow-500 focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden bg-gray-800 text-gray-100 px-6 py-4 space-y-4 hidden">
+      <a href="#projects" class="text-lg hover:text-yellow-400 transition duration-300">Projects</a>
+      <a href="#skills" class="text-lg hover:text-yellow-400 transition duration-300">Skills</a>
+      <a href="#experience" class="text-lg hover:text-yellow-400 transition duration-300">Experience</a>
+      <a href="#courses" class="text-lg hover:text-yellow-400 transition duration-300">Courses</a>
+      <a href="#books" class="text-lg hover:text-yellow-400 transition duration-300">Books</a>
+      <a href="#contact" class="text-lg hover:text-yellow-400 transition duration-300">Contact</a>
+      <a href="/path/to/your/cv.pdf" target="_blank" class="px-6 py-3 bg-yellow-500 text-gray-900 rounded-lg hover:bg-yellow-600 transition duration-300 w-full text-center">
+        Download CV
+      </a>
+    </div>
+  </nav>
+  
+
+  
+
+<!-- Hero Section -->
+<section id="hero" class="h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-gray-100 flex flex-col justify-center items-center text-center space-y-8 px-4">
+    <div class="container mx-auto px-4 fade-in">
+      
+      <!-- Animated Text Heading -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-teal-500 animate-fade-in-down">
+        Hi, I'm Azeem BK
+      </h1>
+      
+      <p class="mt-4 text-xl md:text-2xl lg:text-3xl font-medium text-gray-300 animate-fade-in-up">
+        A Passionate <span class="text-yellow-400 font-semibold">MERN Stack Developer</span> 
+      </p>
+      
+      <!-- Description with Subtle Animation -->
+      <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto animate-fade-in-up">
+        I specialize in building full-stack applications that are efficient, scalable, and user-friendly. Let’s create something amazing together!
+      </p>
+      
+      <!-- Call-to-Action Buttons -->
+      <div class="mt-10 flex justify-center space-x-6 animate-fade-in-up">
+        <a href="#projects" class="px-8 py-4 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition-transform duration-300 transform hover:scale-105">
+          View My Work
+        </a>
+        <a href="#contact" class="px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg shadow-lg border-2 border-white hover:bg-gray-200 transition-transform duration-300 transform hover:scale-105">
+          Contact Me
+        </a>
+      </div>
+  
+      <!-- Decorative Background Elements -->
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <!-- Gradient circles or abstract shapes for visual interest -->
+        <div class="absolute bg-yellow-400 opacity-10 rounded-full h-96 w-96 top-20 left-10 animate-pulse"></div>
+        <div class="absolute bg-teal-500 opacity-10 rounded-full h-96 w-96 bottom-20 right-10 animate-pulse"></div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <!-- About Section -->
+<section id="about" class="py-20 bg-gradient-to-b from-gray-800 to-gray-900 text-gray-200">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center fade-in">
+      <!-- Image -->
+      <div class="md:w-1/3 mb-8 md:mb-0">
+        <img src="https://placehold.co/300x300" alt="Azeem BK" class="w-full h-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+      </div>
+      <!-- Text Content -->
+      <div class="md:w-2/3 md:pl-12 text-center md:text-left">
+        <h3 class="text-4xl font-bold text-teal-400 mb-4">About Me</h3>
+        <p class="text-lg text-gray-400 leading-relaxed mb-4">
+          Hello! I'm Azeem BK, a passionate <span class="text-teal-400 font-semibold">MERN Stack Developer</span> with a knack for building dynamic, responsive, and user-centric web applications. With a deep understanding of both front-end and back-end technologies, I enjoy crafting elegant solutions to complex problems.
+        </p>
+        <p class="text-lg text-gray-400 leading-relaxed mb-8">
+          My journey in web development began with a love for creating intuitive, interactive interfaces, and has since evolved into a full-fledged career where I get to bring ideas to life through code every day. When I'm not coding, I enjoy exploring new tech trends and enhancing my skills in <span class="text-teal-400 font-semibold">SEO, Blogging, and UI Design</span>.
+        </p>
+        <a href="#contact" class="inline-block px-8 py-3 bg-teal-500 text-gray-900 font-semibold rounded hover:bg-teal-600 transition duration-300 transform hover:scale-105">
+          Let's Connect
+        </a>
+      </div>
+    </div>
+  </section>
+  
+<!-- Experience Section -->
+<section id="experience" class="py-20 bg-gradient-to-b from-gray-800 to-gray-900 text-gray-200">
+    <div class="container mx-auto px-6 text-center fade-in">
+      <h3 class="text-4xl font-bold text-teal-400 mb-10">Experience</h3>
+  
+      <div class="relative">
+        <!-- Vertical Timeline Line -->
+        <div class="absolute inset-0 flex justify-center">
+          <div class="w-1 bg-yellow-500"></div>
+        </div>
+        
+        <!-- Timeline Items -->
+        <div class="space-y-12">
+  
+          <!-- Timeline Item 1 -->
+          <div class="relative flex items-start">
+            <div class="w-1/2 pr-8 text-right transform hover:scale-105 transition duration-300">
+              <div class="bg-gray-800 p-6 rounded-lg border border-yellow-500 shadow-lg hover:bg-gray-700">
+                <h4 class="text-2xl font-semibold text-teal-400">Senior MERN Stack Developer</h4>
+                <p class="text-gray-400">Tech Solutions Inc.</p>
+                <span class="text-sm text-yellow-400">2022 - Present</span>
+                <p class="mt-2 text-gray-400 leading-relaxed">
+                  Lead developer focusing on building scalable web applications, managing a team, and implementing advanced technologies to improve user experience.
+                </p>
+              </div>
+            </div>
+            <div class="w-1 flex justify-center">
+              <!-- Yellow Dot -->
+              <div class="w-6 h-6 rounded-full bg-yellow-500 border-4 border-gray-900"></div>
+            </div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+  
+          <!-- Timeline Item 2 -->
+          <div class="relative flex items-start">
+            <div class="w-1/2 pr-8"></div>
+            <div class="w-1 flex justify-center">
+              <!-- Yellow Dot -->
+              <div class="w-6 h-6 rounded-full bg-yellow-500 border-4 border-gray-900"></div>
+            </div>
+            <div class="w-1/2 pl-8 text-left transform hover:scale-105 transition duration-300">
+              <div class="bg-gray-800 p-6 rounded-lg border border-yellow-500 shadow-lg hover:bg-gray-700">
+                <h4 class="text-2xl font-semibold text-teal-400">Frontend Developer</h4>
+                <p class="text-gray-400">Creative Web Solutions</p>
+                <span class="text-sm text-yellow-400">2020 - 2022</span>
+                <p class="mt-2 text-gray-400 leading-relaxed">
+                  Worked on creating interactive and responsive web interfaces, with a focus on performance optimization and seamless user experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Timeline Item 3 -->
+          <div class="relative flex items-start">
+            <div class="w-1/2 pr-8 text-right transform hover:scale-105 transition duration-300">
+              <div class="bg-gray-800 p-6 rounded-lg border border-yellow-500 shadow-lg hover:bg-gray-700">
+                <h4 class="text-2xl font-semibold text-teal-400">Junior Web Developer</h4>
+                <p class="text-gray-400">Digital Agency XYZ</p>
+                <span class="text-sm text-yellow-400">2018 - 2020</span>
+                <p class="mt-2 text-gray-400 leading-relaxed">
+                  Developed web applications, collaborating closely with the design team to implement pixel-perfect, visually appealing websites.
+                </p>
+              </div>
+            </div>
+            <div class="w-1 flex justify-center">
+              <!-- Yellow Dot -->
+              <div class="w-6 h-6 rounded-full bg-yellow-500 border-4 border-gray-900"></div>
+            </div>
+            <div class="w-1/2 pl-8"></div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-12">My Projects</h2>
+      
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+          <img src="https://placehold.co/600x400" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Project 1 Title</h3>
+            <p class="text-gray-300 mb-4">A brief description of Project 1 goes here. It includes the main features and purpose of the project.</p>
+            <button onclick="openModal('project1')" class="px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">View Details</button>
+          </div>
+        </div>
+        
+        <!-- Project Card 2 -->
+        <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+          <img src="https://placehold.co/600x400" alt="Project 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Project 2 Title</h3>
+            <p class="text-gray-300 mb-4">A brief description of Project 2 goes here. It includes the main features and purpose of the project.</p>
+            <button onclick="openModal('project2')" class="px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">View Details</button>
+          </div>
+        </div>
+        
+        <!-- Project Card 3 -->
+        <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105">
+          <img src="https://placehold.co/600x400" alt="Project 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Project 3 Title</h3>
+            <p class="text-gray-300 mb-4">A brief description of Project 3 goes here. It includes the main features and purpose of the project.</p>
+            <button onclick="openModal('project3')" class="px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">View Details</button>
+          </div>
+        </div>
+        
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+  
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center p-4 z-50">
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-lg w-full text-gray-100 p-6 relative">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200">&times;</button>
+        <h3 id="modal-title" class="text-2xl font-bold text-yellow-400 mb-4">Project Title</h3>
+        <img id="modal-image" src="https://placehold.co/600x400" alt="Project Image" class="w-full rounded-md mb-4">
+        <p id="modal-description" class="text-lg text-gray-300 mb-4">This is a detailed description of the project, its features, technologies used, and any other important information. You can add more detailed information here to give users insight into what the project entails.</p>
+        <a href="#" id="modal-read-more" class="px-4 py-2 bg-teal-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-teal-600 transition">Read More</a>
+      </div>
+    </div>
+  </section>
+  
+ 
+
+  <!-- Skills Section -->
+<section id="skills" class="py-20 bg-gray-900 bg-opacity-80 backdrop-blur-md">
+    <div class="container mx-auto px-6 text-center fade-in">
+      <h3 class="text-4xl font-semibold text-teal-400 mb-10">My Skills</h3>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        
+        <!-- Skill Card Template -->
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="HTML Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">HTML</h4>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="CSS Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">CSS</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="JavaScript Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">JavaScript</h4>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="React Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">React</h4>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="Node.js Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">Node.js</h4>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="Express Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">Express.js</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="Bootstrap Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">Bootstrap</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="MongoDB Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">MongoDB</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="MySQL Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">MySQL</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="Tailwind CSS Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">Tailwind CSS</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="Vue.js Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">Vue.js</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="Angular Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">Angular</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="MERN Stack Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">MERN Stack</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="Blogging Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">Blogging</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="SEO Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">SEO</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="WordPress Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">WordPress</h4>
+        </div>
+  
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
+          <img src="https://placehold.co/80x80" alt="Photoshop Icon" class="w-20 h-20 mx-auto mb-4">
+          <h4 class="text-xl font-semibold text-teal-400">Photoshop</h4>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+
+<!-- Courses Section -->
+<section id="courses" class="py-20 bg-gradient-to-b from-gray-900 to-black text-gray-100 relative">
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-12">My Courses</h2>
+  
+      <!-- Courses Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Course Card -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl duration-300 relative">
+          <div class="relative">
+            <img src="https://placehold.co/500x300" alt="Course Thumbnail" class="w-full h-64 object-cover rounded-t-lg">
+            <!-- Play Button on Thumbnail -->
+            <button onclick="openVideoPopup('https://www.youtube.com/embed/YOUR_VIDEO_ID')" 
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-yellow-400 text-4xl font-bold rounded-t-lg hover:bg-opacity-75 transition">
+              ▶
+            </button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Course Title 1</h3>
+            <p class="text-lg font-bold text-teal-400 mb-2">$49.99</p>
+            <p class="text-sm text-gray-300 mb-2">Duration: 10 hours</p>
+            <a href="/enroll" class="px-4 py-2 mt-4 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">Enroll</a>
+          </div>
+        </div>
+  
+        <!-- Repeat for additional courses -->
+        <!-- Course Card 2 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl duration-300 relative">
+          <div class="relative">
+            <img src="https://placehold.co/500x300" alt="Course Thumbnail" class="w-full h-64 object-cover rounded-t-lg">
+            <button onclick="openVideoPopup('https://www.youtube.com/embed/YOUR_VIDEO_ID_2')" 
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-yellow-400 text-4xl font-bold rounded-t-lg hover:bg-opacity-75 transition">
+              ▶
+            </button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Course Title 2</h3>
+            <p class="text-lg font-bold text-teal-400 mb-2">$39.99</p>
+            <p class="text-sm text-gray-300 mb-2">Duration: 8 hours</p>
+            <a href="/enroll" class="px-4 py-2 mt-4 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">Enroll</a>
+          </div>
+        </div>
+  
+        <!-- Course Card 3 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl duration-300 relative">
+          <div class="relative">
+            <img src="https://placehold.co/500x300" alt="Course Thumbnail" class="w-full h-64 object-cover rounded-t-lg">
+            <button onclick="openVideoPopup('https://www.youtube.com/embed/YOUR_VIDEO_ID_3')" 
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-yellow-400 text-4xl font-bold rounded-t-lg hover:bg-opacity-75 transition">
+              ▶
+            </button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Course Title 3</h3>
+            <p class="text-lg font-bold text-teal-400 mb-2">$59.99</p>
+            <p class="text-sm text-gray-300 mb-2">Duration: 12 hours</p>
+            <a href="/enroll" class="px-4 py-2 mt-4 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">Enroll</a>
+          </div>
+        </div>
+        
+      </div>
+  
+      <!-- View All Courses Button -->
+      <div class="mt-10">
+        <a href="/all-courses" class="px-6 py-3 border border-yellow-500 text-yellow-500 font-semibold rounded-lg hover:bg-yellow-500 hover:text-gray-900 transition duration-300">View All Courses</a>
+      </div>
+    </div>
+  
+    <!-- Video Popup Modal -->
+    <div id="videoPopup" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+      <div class="relative w-11/12 md:w-3/4 lg:w-1/2 bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+        <button onclick="closeVideoPopup()" class="absolute top-4 right-4 text-yellow-500 text-2xl font-bold">✕</button>
+        <iframe id="videoFrame" src="" class="w-full h-64 md:h-96" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+
+
+
+
+ <!-- Books Section -->
+<section id="books" class="py-20 bg-gradient-to-b from-gray-900 to-black relative text-gray-100">
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-12">My Books</h2>
+      
+      <!-- Book Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <!-- Book Card -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl duration-300">
+          <img src="https://placehold.co/500x750" alt="Book 1 Cover" class="w-full h-72 object-cover rounded-t-lg">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Book Title 1</h3>
+            <p class="text-lg font-bold text-teal-400 mb-2">$19.99</p>
+            <p class="text-gray-300 mb-4 text-sm">An engaging summary of Book 1 that highlights key points and draws readers' interest.</p>
+            <a href="#" class="px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">More Details</a>
+          </div>
+        </div>
+        
+        <!-- Book Card 2 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl duration-300">
+          <img src="https://placehold.co/500x750" alt="Book 2 Cover" class="w-full h-72 object-cover rounded-t-lg">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Book Title 2</h3>
+            <p class="text-lg font-bold text-teal-400 mb-2">$24.99</p>
+            <p class="text-gray-300 mb-4 text-sm">An engaging summary of Book 2 that highlights key points and draws readers' interest.</p>
+            <a href="#" class="px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">More Details</a>
+          </div>
+        </div>
+  
+        <!-- Book Card 3 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl duration-300">
+          <img src="https://placehold.co/500x750" alt="Book 3 Cover" class="w-full h-72 object-cover rounded-t-lg">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Book Title 3</h3>
+            <p class="text-lg font-bold text-teal-400 mb-2">$29.99</p>
+            <p class="text-gray-300 mb-4 text-sm">An engaging summary of Book 3 that highlights key points and draws readers' interest.</p>
+            <a href="#" class="px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">More Details</a>
+          </div>
+        </div>
+  
+        <!-- Book Card 4 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl duration-300">
+          <img src="https://placehold.co/500x750" alt="Book 4 Cover" class="w-full h-72 object-cover rounded-t-lg">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Book Title 4</h3>
+            <p class="text-lg font-bold text-teal-400 mb-2">$34.99</p>
+            <p class="text-gray-300 mb-4 text-sm">An engaging summary of Book 4 that highlights key points and draws readers' interest.</p>
+            <a href="#" class="px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">More Details</a>
+          </div>
+        </div>
+  
+        <!-- Book Card 5 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl duration-300">
+          <img src="https://placehold.co/500x750" alt="Book 5 Cover" class="w-full h-72 object-cover rounded-t-lg">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Book Title 5</h3>
+            <p class="text-lg font-bold text-teal-400 mb-2">$39.99</p>
+            <p class="text-gray-300 mb-4 text-sm">An engaging summary of Book 5 that highlights key points and draws readers' interest.</p>
+            <a href="#" class="px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">More Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- See All Books Button -->
+      <div class="mt-10">
+        <a href="#" class="px-6 py-3 border border-yellow-500 text-yellow-500 font-semibold rounded-lg hover:bg-yellow-500 hover:text-gray-900 transition duration-300">See All Books</a>
+      </div>
+    </div>
+  
+    <!-- Decorative Background Elements -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute bg-yellow-400 opacity-10 rounded-full h-96 w-96 top-16 left-16 animate-pulse"></div>
+      <div class="absolute bg-teal-500 opacity-10 rounded-full h-96 w-96 bottom-16 right-16 animate-pulse"></div>
+      <div class="absolute bg-gray-700 opacity-5 w-full h-full top-0 left-0" style="background-image: url('https://placehold.co/1920x1080'); background-size: cover; background-repeat: no-repeat; mix-blend-mode: overlay;"></div>
+    </div>
+  </section>
+  
+
+ 
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-200">
+    <div class="container mx-auto px-6 text-center fade-in">
+      <h3 class="text-4xl font-bold text-yellow-400 mb-12">Get in Touch</h3>
+  
+      <!-- Contact Buttons -->
+      <div class="space-y-6 mb-12">
+        <!-- Email Button with Yellow Border -->
+        <a href="mailto:your-email@example.com" style="color: #f8fafc;" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center justify-center w-full max-w-xs py-4 px-6 bg-teal-500 text-gray-900 font-semibold rounded-lg shadow-lg border-4 border-yellow-400 hover:bg-teal-600 transition duration-300 transform hover:scale-105">
+           <svg class="h-6 w-6 text-yellow-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />  <line x1="8" y1="9" x2="16" y2="9" />  <line x1="8" y1="13" x2="14" y2="13" /></svg>
+           Email Me
+        </a>
+  
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center w-full max-w-xs py-4 px-6 bg-green-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-105">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12c0 6.627 5.371 12 12 12 6.627 0 12-5.373 12-12C24 5.371 18.629 0 12 0zm.044 19.451c-1.41 0-2.805-.289-4.104-.858l-.291-.136-2.565.673.682-2.525-.175-.292c-.583-1.037-.895-2.233-.895-3.466 0-4.131 3.357-7.488 7.49-7.488 2.004 0 3.888.78 5.303 2.194 1.415 1.413 2.194 3.296 2.194 5.294 0 4.133-3.358 7.491-7.49 7.491z"/></svg>
+          WhatsApp Me
+        </a>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="flex justify-center space-x-8 mt-8">
+        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"
+           class="text-gray-400 hover:text-yellow-400 transition duration-300 transform hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 .865-.7 1.5-1.49 1.5-.794 0-1.5-.635-1.5-1.5C2 2.635 2.706 2 3.49 2c.79 0 1.49.635 1.49 1.5zM0 21h5V7H0v14zM19.75 7c-3.99 0-4.75 1.93-4.75 3.58V21h-5V7h5v1.667C16 7.833 17.31 7 19.75 7H24v14h-5V10.58c0-.694-.218-1.167-1.25-1.167z"/></svg>
+        </a>
+        <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer"
+           class="text-gray-400 hover:text-yellow-400 transition duration-300 transform hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.56c-.883.392-1.83.656-2.825.775a4.935 4.935 0 0 0 2.163-2.725c-.95.555-2.005.96-3.127 1.184a4.92 4.92 0 0 0-8.384 4.48A13.964 13.964 0 0 1 1.675 3.149a4.927 4.927 0 0 0-.665 2.475 4.918 4.918 0 0 0 2.187 4.1 4.904 4.904 0 0 1-2.229-.616v.061a4.922 4.922 0 0 0 3.946 4.829 4.9 4.9 0 0 1-2.224.084 4.926 4.926 0 0 0 4.6 3.417 9.868 9.868 0 0 1-6.107 2.105c-.397 0-.788-.023-1.176-.068a13.945 13.945 0 0 0 7.557 2.212c9.054 0 14-7.503 14-14V6.684a9.92 9.92 0 0 0 2.46-2.516z"/></svg>
+        </a>
+        <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer"
+           class="text-gray-400 hover:text-yellow-400 transition duration-300 transform hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.579 0-.285-.011-1.042-.017-2.045-3.338.726-4.042-1.614-4.042-1.614-.546-1.387-1.334-1.756-1.334-1.756-1.091-.746.083-.73.083-.73 1.206.085 1.84 1.238 1.84 1.238 1.072 1.834 2.809 1.303 3.492.997.109-.776.419-1.303.763-1.603-2.666-.303-5.466-1.333-5.466-5.931 0-1.309.469-2.381 1.235-3.221-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.228.957-.266 1.983-.399 3.003-.404 1.018.005 2.045.138 3.003.404 2.291-1.551 3.297-1.228 3.297-1.228.655 1.653.243 2.873.12 3.176.769.84 1.235 1.912 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.431.372.815 1.103.815 2.222 0 1.606-.015 2.901-.015 3.297 0 .319.193.694.8.576C20.565 21.795 24 17.297 24 12 24 5.373 18.627 0 12 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-center">
+    <p class="text-gray-500">&copy; 2024 Azeem BK. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    // JavaScript to handle the modal popup
+    function openModal(projectId) {
+      const modal = document.getElementById('project-modal');
+      const title = document.getElementById('modal-title');
+      const image = document.getElementById('modal-image');
+      const description = document.getElementById('modal-description');
+      const readMoreLink = document.getElementById('modal-read-more');
+      
+      // Update content based on projectId
+      if (projectId === 'project1') {
+        title.innerText = "Project 1 Title";
+        image.src = "https://placehold.co/600x400";
+        description.innerText = "This is a detailed description of Project 1. It includes the purpose of the project, technologies used, and notable features.";
+        readMoreLink.href = "#"; // Link to full project page or blog post
+      } else if (projectId === 'project2') {
+        title.innerText = "Project 2 Title";
+        image.src = "https://placehold.co/600x400";
+        description.innerText = "This is a detailed description of Project 2. It includes the purpose of the project, technologies used, and notable features.";
+        readMoreLink.href = "#"; // Link to full project page or blog post
+      } else if (projectId === 'project3') {
+        title.innerText = "Project 3 Title";
+        image.src = "https://placehold.co/600x400";
+        description.innerText = "This is a detailed description of Project 3. It includes the purpose of the project, technologies used, and notable features.";
+        readMoreLink.href = "#"; // Link to full project page or blog post
+      }
+      
+      modal.classList.remove('hidden');
+    }
+  
+    function closeModal() {
+      const modal = document.getElementById('project-modal');
+      modal.classList.add('hidden');
+    }
+  </script>
+
+
+<!-- JavaScript for Popup -->
+<script>
+    function openVideoPopup(videoUrl) {
+      document.getElementById("videoPopup").classList.remove("hidden");
+      document.getElementById("videoFrame").src = videoUrl;
+    }
+  
+    function closeVideoPopup() {
+      document.getElementById("videoPopup").classList.add("hidden");
+      document.getElementById("videoFrame").src = "";
+    }
+  </script>
+
+
+  <!-- JavaScript to Toggle Mobile Menu -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
